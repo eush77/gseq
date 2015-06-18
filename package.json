@@ -1,0 +1,31 @@
+{
+  "name": "gseq",
+  "version": "0.0.0",
+  "description": "Print geometric sequence of numbers, like Unix seq",
+  "author": "Eugene Sharygin <eush77@gmail.com>",
+  "license": "MIT",
+  "preferGlobal": true,
+  "bin": {
+    "gseq": "cli.js"
+  },
+  "files": [
+    "cli.js"
+  ],
+  "homepage": "https://github.com/eush77/gseq",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eush77/gseq"
+  },
+  "bugs": {
+    "url": "https://github.com/eush77/gseq/issues"
+  },
+  "keywords": [
+    "seq",
+    "geometric",
+    "sequence",
+    "cli",
+    "unix"
+  ],
+  "dependencies": {},
+  "devDependencies": {}
+}

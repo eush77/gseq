@@ -1,7 +1,7 @@
 {
   "name": "gseq",
   "version": "0.0.0",
-  "description": "Print geometric sequence of numbers, like Unix seq",
+  "description": "Like Unix seq, but geometric",
   "author": "Eugene Sharygin <eush77@gmail.com>",
   "license": "MIT",
   "preferGlobal": true,
@@ -21,10 +21,23 @@
   },
   "keywords": [
     "seq",
-    "geometric",
-    "sequence",
     "cli",
-    "unix"
+    "unix",
+    "logarithmic",
+    "range",
+    "logrange",
+    "logspace",
+    "geometric",
+    "ascending",
+    "descending",
+    "sequence",
+    "progression",
+    "array",
+    "seq",
+    "ratio",
+    "factor",
+    "multiply",
+    "multiplication"
   ],
   "dependencies": {},
   "devDependencies": {}

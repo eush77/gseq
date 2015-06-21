@@ -1,7 +1,17 @@
 #!/usr/bin/env node
 'use strict';
 
-var logrange = require('logrange');
+var logrange = require('logrange'),
+    help = require('help-version')(usage()).help;
+
+
+function usage() {
+  return [
+    'Usage:  gseq FIRST RATIO LAST',
+    '',
+    'Print geometric sequence of numbers, from FIRST to LAST.'
+  ].join('\n');
+}
 
 
 (function main(argv) {

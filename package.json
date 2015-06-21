@@ -40,6 +40,7 @@
     "multiplication"
   ],
   "dependencies": {
+    "help-version": "^0.2.0",
     "logrange": "^1.1.0"
   },
   "devDependencies": {}

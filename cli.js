@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 'use strict';
 
+var logrange = require('logrange');
+
 
 (function main(argv) {
   var first, ratio, last;
@@ -24,7 +26,7 @@
       process.exit(1);
   }
 
-  for (var n = first; n <= last; n *= ratio) {
-    console.log(n);
-  }
+  var print = function (x) { console.log(x) };
+
+  logrange({ inclusive: true }, first, last, ratio).forEach(print);
 }(process.argv.slice(2)));

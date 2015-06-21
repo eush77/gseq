@@ -1,6 +1,6 @@
 {
   "name": "gseq",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Like Unix seq, but geometric",
   "author": "Eugene Sharygin <eush77@gmail.com>",
   "license": "MIT",

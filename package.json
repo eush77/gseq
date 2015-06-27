@@ -8,6 +8,9 @@
   "bin": {
     "gseq": "cli.js"
   },
+  "scripts": {
+    "test": "tape test/*.js"
+  },
   "files": [
     "cli.js"
   ],
@@ -43,5 +46,8 @@
     "help-version": "^1.0.0",
     "logrange": "^1.1.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "tape": "^4.0.0",
+    "test-cli": "^0.1.0"
+  }
 }

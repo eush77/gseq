@@ -2,19 +2,20 @@
 'use strict';
 
 var logrange = require('logrange'),
-    help = require('help-version')(usage()).help;
+    helpVersion = require('help-version');
 
 
-function usage() {
-  return [
-    'Usage:  gseq FIRST RATIO LAST',
-    '',
-    'Print geometric sequence of numbers, from FIRST to LAST.'
-  ].join('\n');
-}
+var usage = [
+  'Usage:  gseq FIRST RATIO LAST',
+  '',
+  'Print geometric sequence of numbers, from FIRST to LAST.'
+].join('\n');
 
 
-(function main(argv) {
+var cli = module.exports = function (process, exit) {
+  var argv = process.argv.slice(2);
+  var help = helpVersion(usage, process).help;
+
   if (argv.length != 3) {
     return help(1);
   }
@@ -23,7 +24,13 @@ function usage() {
       ratio = +argv[1],
       last = +argv[2];
 
-  var print = function (x) { console.log(x) };
+  var print = function (x) {
+    process.stdout.write(x + '\n');
+  };
 
   logrange({ inclusive: true }, first, last, ratio).forEach(print);
-}(process.argv.slice(2)));
+  exit();
+};
+
+
+if (!module.parent) cli(process, process.exit);

@@ -2,10 +2,12 @@
 
 # gseq
 
-[![Dependency Status][david-badge]][david]
+[![Build Status][travis-badge]][travis] [![Dependency Status][david-badge]][david]
 
 Print geometric sequence of numbers, from one number to the other.
 
+[travis]: https://travis-ci.org/eush77/gseq
+[travis-badge]: https://travis-ci.org/eush77/gseq.svg
 [david]: https://david-dm.org/eush77/gseq
 [david-badge]: https://david-dm.org/eush77/gseq.png
 

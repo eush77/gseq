@@ -1,4 +1,4 @@
-[![npm](https://nodei.co/npm/gseq.png)](https://nodei.co/npm/gseq/)
+[![npm](https://nodei.co/npm/gseq.png)](https://npmjs.com/package/gseq)
 
 # gseq
 

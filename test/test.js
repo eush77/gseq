@@ -60,3 +60,13 @@ test('format', function (t) {
     t.end();
   });
 });
+
+
+test('separator', function (t) {
+  cli(gseq, '--separator', '__', '1', '3', '10', function (output, errput, code) {
+    t.equal(output, '1__3__9\n');
+    t.equal(errput, '');
+    t.equal(code, 0);
+    t.end();
+  });
+});

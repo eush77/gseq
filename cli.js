@@ -18,7 +18,11 @@ var cli = module.exports = function (process, exit) {
   var help = helpVersion(usage, process).help;
   var opts = minimist(process.argv.slice(2), {
     alias: {
-      format: 'f'
+      format: 'f',
+      separator: 's'
+    },
+    default: {
+      separator: '\n'
     },
     unknown: function (arg) {
       if (arg[0] == '-') {
@@ -36,13 +40,17 @@ var cli = module.exports = function (process, exit) {
       ratio = +argv[1],
       last = +argv[2];
 
-  logrange({ inclusive: true }, first, last, ratio).forEach(function (val) {
-    if (opts.format != null) {
-      val = sprintf(opts.format, val);
-    }
-    process.stdout.write(val + '\n');
-  });
+  var output = logrange({ inclusive: true }, first, last, ratio)
+        .map(function (val) {
+          return opts.format != null
+            ? sprintf(opts.format, val)
+            : val;
+        })
+        .join(opts.separator);
 
+  if (output) {
+    process.stdout.write(output + '\n');
+  }
   exit();
 };
 

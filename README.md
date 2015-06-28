@@ -35,6 +35,7 @@ Options:
 
 - `-f, --format=FORMAT`: use printf-style FORMAT for each number.
 - `-s, --separator=STRING`: use STRING to separate numbers (default: `\n`).
+- `-w, --equal-width`: equalize width by padding with zeroes.
 
 ## Install
 

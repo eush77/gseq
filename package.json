@@ -43,6 +43,7 @@
     "multiplication"
   ],
   "dependencies": {
+    "align-dots": "^1.0.0",
     "help-version": "^1.0.0",
     "logrange": "^1.1.0",
     "minimist": "^1.1.1",

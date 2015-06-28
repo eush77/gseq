@@ -70,3 +70,13 @@ test('separator', function (t) {
     t.end();
   });
 });
+
+
+test('equal width', function (t) {
+  cli(gseq, '--equal-width', '0.25', '4', '20', function (output, errput, code) {
+    t.equal(output, ['00.25', '01.00', '04.00', '16.00', ''].join('\n'));
+    t.equal(errput, '');
+    t.equal(code, 0);
+    t.end();
+  });
+});

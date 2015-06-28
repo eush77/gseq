@@ -50,3 +50,13 @@ test('descending', function (t) {
     t.equal(code, 0);
   });
 });
+
+
+test('format', function (t) {
+  cli(gseq, '--format', '%.4f', '0.25', '2', '2', function (output, errput, code) {
+    t.equal(output, ['0.2500', '0.5000', '1.0000', '2.0000', ''].join('\n'));
+    t.equal(errput, '');
+    t.equal(code, 0);
+    t.end();
+  });
+});

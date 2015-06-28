@@ -44,7 +44,9 @@
   ],
   "dependencies": {
     "help-version": "^1.0.0",
-    "logrange": "^1.1.0"
+    "logrange": "^1.1.0",
+    "minimist": "^1.1.1",
+    "printf": "^0.2.3"
   },
   "devDependencies": {
     "tape": "^4.0.0",

@@ -2,7 +2,9 @@
 'use strict';
 
 var logrange = require('logrange'),
-    helpVersion = require('help-version');
+    helpVersion = require('help-version'),
+    minimist = require('minimist'),
+    sprintf = require('printf');
 
 
 var usage = [
@@ -13,8 +15,18 @@ var usage = [
 
 
 var cli = module.exports = function (process, exit) {
-  var argv = process.argv.slice(2);
   var help = helpVersion(usage, process).help;
+  var opts = minimist(process.argv.slice(2), {
+    alias: {
+      format: 'f'
+    },
+    unknown: function (arg) {
+      if (arg[0] == '-') {
+        help(1);
+      }
+    }
+  });
+  var argv = opts._;
 
   if (argv.length != 3) {
     return help(1);
@@ -24,11 +36,13 @@ var cli = module.exports = function (process, exit) {
       ratio = +argv[1],
       last = +argv[2];
 
-  var print = function (x) {
-    process.stdout.write(x + '\n');
-  };
+  logrange({ inclusive: true }, first, last, ratio).forEach(function (val) {
+    if (opts.format != null) {
+      val = sprintf(opts.format, val);
+    }
+    process.stdout.write(val + '\n');
+  });
 
-  logrange({ inclusive: true }, first, last, ratio).forEach(print);
   exit();
 };
 

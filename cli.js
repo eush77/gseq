@@ -8,9 +8,13 @@ var logrange = require('logrange'),
 
 
 var usage = [
-  'Usage:  gseq FIRST RATIO LAST',
+  'Usage:  gseq [OPTION]... FIRST RATIO LAST',
   '',
-  'Print geometric sequence of numbers, from FIRST to LAST.'
+  'Print geometric sequence of numbers, from FIRST to LAST.',
+  '',
+  'Options:',
+  '  -f, --format=FORMAT     Use printf-style FORMAT for each number.',
+  '  -s, --separator=STRING  Use STRING to separate numbers (default: "\\n").'
 ].join('\n');
 
 

@@ -25,11 +25,16 @@ Print geometric sequence of numbers, from one number to the other.
 
 ## CLI
 
-### `> gseq FIRST RATIO LAST`
+### `> gseq [OPTION]... FIRST RATIO LAST`
 
 Prints `FIRST`, `FIRST*RATIO`, `FIRST*RATIO*RATIO`, … up to a number that exceeds `LAST`.
 
 The sequence is descending if `RATIO<1`. All parameters must be positive.
+
+Options:
+
+- `-f, --format=FORMAT`: use printf-style FORMAT for each number.
+- `-s, --separator=STRING`: use STRING to separate numbers (default: `\n`).
 
 ## Install
 
